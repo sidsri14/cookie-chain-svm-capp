@@ -5,6 +5,9 @@ import { fileURLToPath } from 'node:url';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  // GH Pages project sites are served from /<repo-name>/, so the deploy
+  // workflow overrides the base via VITE_BASE. Local dev/preview stay on "/".
+  base: process.env.VITE_BASE ?? '/',
   resolve: {
     alias: {
       // @solana/web3.js v1 imports the Node `buffer` builtin even in its browser
