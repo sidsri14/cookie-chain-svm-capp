@@ -1,3 +1,5 @@
+import { COOK_BRIDGE_URL, COOK_TELEGRAM_URL } from './cookie-chain';
+
 /** Turn a thrown wallet/RPC error into a short, human-readable message. */
 export function getWalletErrorMessage(error: unknown): string {
   if (!error) return 'Something went wrong. Try again.';
@@ -14,7 +16,17 @@ export function getWalletErrorMessage(error: unknown): string {
   if (/(user rejected|rejected the request|denied|declined|user canceled)/.test(lower)) {
     return 'Transaction was rejected in your wallet.';
   }
-  if (/(insufficient|attempt to debit|0x1|0x1770)/.test(lower)) {
+  // AccountNotFound (RPC code -32002): the fee-payer has never been funded on Cookie
+  // Chain, so no on-chain account exists to debit the fee from. Nightly surfaces this
+  // as "account not found". This is the #1 "can't post" cause for brand-new wallets.
+  if (
+    /(account.?not.?found|account.?not.?exist|accountnotfound|no record of a prior credit|attempt to debit|0x1)/.test(
+      lower,
+    )
+  ) {
+    return `Your wallet has no COOK on Cookie Chain yet, so there's no funded account to pay the posting fee. Cookie Chain has no faucet — get a little COOK from the official Telegram (${COOK_TELEGRAM_URL}) or bridge it from Solana (${COOK_BRIDGE_URL}), then post again.`;
+  }
+  if (/(insufficient|0x1770)/.test(lower)) {
     return 'Insufficient native COOK balance to pay the transaction fee.';
   }
   if (/(blockhash.*expir|too old|expired blockhash)/.test(lower)) {

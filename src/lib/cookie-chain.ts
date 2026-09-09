@@ -8,6 +8,12 @@ export const COOKIE_EXPLORER_URL = 'https://cookiescan.io';
 export const COOKIE_GENESIS_HASH = '9wDaBRDgArEUpvhHxGguNkwozsZh4UpGZB9o2EoEcBB2';
 /** Native COOK has the same 9-decimal unit as lamports. */
 export const COOK_DECIMALS = 9;
+/** Base fee for a one-instruction (Memo) transaction, in lamports. Verified via getFeeForMessage. */
+export const COOK_FEE_LAMPORTS = 5_000;
+/** Official community channel where new wallets can be sent a little COOK to cover gas. */
+export const COOK_TELEGRAM_URL = 'https://t.me/TheCookieNetChain';
+/** Official Hyperlane warp bridge to move COOK from Solana to Cookie Chain. */
+export const COOK_BRIDGE_URL = 'https://hyperlane.cookiescan.io';
 
 /**
  * The Solana Memo program is deployed at genesis on Cookie Chain, so any wallet can
