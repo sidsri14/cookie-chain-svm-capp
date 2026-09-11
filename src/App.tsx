@@ -3,6 +3,7 @@ import { CookieWalletProvider } from './components/CookieWalletProvider';
 import { ConnectButton } from './components/ConnectButton';
 import { NetworkSwitchCard } from './components/NetworkSwitchCard';
 import { ComposeBox } from './components/ComposeBox';
+import { ChainStats } from './components/ChainStats';
 import { MemoFeed } from './components/MemoFeed';
 import { fetchRecentMemos } from './lib/memo-feed';
 import { getWalletErrorMessage } from './lib/tx-errors';
@@ -109,6 +110,8 @@ function WallApp() {
             .
           </p>
         </div>
+
+        <ChainStats posts={posts} />
 
         <MemoFeed
           posts={posts}

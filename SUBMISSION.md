@@ -1,14 +1,37 @@
 # Cookie Wall — Superteam Earn Submission Kit
 
-Bounty: **Create an App on Cookie Chain ($1,000 USDC)**
-Deadline: **2026-09-22 21:59 UTC** (verified via Superteam API 2026-09-11)
+Bounty: **Create an App on Cookie Chain ($1,000 USDC)** — 2 × 500 USDC prizes
+Slug: `create-an-app-on-cookie-chain-app`
+Deadline: **2026-09-22 21:59:59 UTC** (verified via Superteam API 2026-09-11)
 Live URL: https://sidsri14.github.io/cookie-chain-svm-capp/
 Repo: https://github.com/sidsri14/cookie-chain-svm-capp
 Screenshots: `screenshots/01-home-feed.png`, `02-connect-modal.png`, `03-live-deploy.png`
 
 ---
 
-## 1. Pitch (submission body — 244 words)
+## 0. What the bounty actually requires (verified verbatim 2026-09-11)
+
+**Submission Requirements — "Submit the following:"**
+1. **Live application URL** (form link field, required)
+2. **GitHub repository** (form link field, required)
+3. **Relevant program, contract, token, or application addresses** (form text field, required — "if applicable")
+
+**Demo Requirements — "Create an X (Twitter) thread that:"**
+- Explains what your application does
+- Demonstrates how users can use it
+- Includes a guide directing users to the Cookie Chain Bridge where relevant
+
+**Final Step — "Share your X thread in the Cookie Chain Telegram community."**
+
+**Technical Requirements:** source code must be open source; include a comprehensive README
+with setup instructions.
+
+> ⚠️ **There is NO video requirement.** An earlier draft of this file included a Loom
+> script — that was an invention and has been removed. The demo deliverable is the **X thread**.
+
+---
+
+## 1. Pitch (submission body — paste into the description / repo README top)
 
 > **Cookie Wall — a live on-chain memo board on Cookie Chain.**
 >
@@ -23,6 +46,8 @@ Screenshots: `screenshots/01-home-feed.png`, `02-connect-modal.png`, `03-live-de
 > - **Live memo feed.** Reads `getSignaturesForAddress` + `getTransaction` (jsonParsed)
 >   from `rpc.cookiescan.io` and decodes every memo instruction with its signer and
 >   timestamp. The feed works **without a wallet** — it is the real, chain-wide history.
+> - **On-chain activity analytics.** Memos in view, unique posters, 24h/hourly volume, and a
+>   12-hour sparkline — all derived from decoded chain data, no extra RPC calls.
 > - **Native COOK balance** for the connected wallet, read straight from Cookie Chain.
 > - **One-click network switch.** The chain-status card re-targets the Nightly wallet to
 >   the Cookie Chain genesis hash via `changeNetwork`, and confirms the genesis matches.
@@ -37,62 +62,106 @@ Screenshots: `screenshots/01-home-feed.png`, `02-connect-modal.png`, `03-live-de
 
 ---
 
-## 2. Loom demo script (~2 min, dead air trimmed)
+## 2. Submission form answers (copy-paste — 3 required fields)
 
-Record at https://sidsri14.github.io/cookie-chain-svm-capp/ — full-screen browser, wallet popped out.
+| Form field | Value |
+|-----------|-------|
+| **GitHub repository** (link) | `https://github.com/sidsri14/cookie-chain-svm-capp` |
+| **Relevant program / contract / token / application addresses** (text) | `Memo program: MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr` · `Chain genesis: 9wDaBRDgArEUpvhHxGguNkwozsZh4UpGZB9o2EoEcBB2` · `RPC: https://rpc.cookiescan.io` |
+| **Live application URL** (link) | `https://sidsri14.github.io/cookie-chain-svm-capp/` |
 
-| # | Timestamp | On screen | Say |
-|---|-----------|-----------|-----|
-| 0 | 0:00–0:12 | Landing page, feed already populated, live slot ticking in the chain-status card | "This is Cookie Wall — a live memo board on Cookie Chain SVM. Everything you see is real on-chain data, read straight from the Cookie Chain RPC. Watch the slot counter — that's the chain moving in real time." |
-| 1 | 0:12–0:33 | Scroll the memo feed; hover a signature; click a CookieScan link | "The feed decodes every Memo-program instruction from real chain history and shows the signer and timestamp. Each post deep-links to CookieScan. Notice it works with no wallet connected — this is the chain-wide feed, not my local state." |
-| 2 | 0:33–0:52 | Click the network-switch card → "Switch Nightly → Cookie Chain" | "The chain-status card reads the genesis hash and confirms it's Cookie Chain. One click re-targets the Nightly wallet to the Cookie Chain network by genesis hash — so nobody has to add the RPC by hand." |
-| 3 | 0:52–1:15 | Open the connect modal, connect Nightly — **need COOK here**, see note | "I connect my Nightly wallet. Here's the part that proves it's real: the balance is read from Cookie Chain itself, so if the wallet has no COOK, the Post button disables and the app tells you exactly how to get gas — bridge from Solana or grab a little from the Telegram." |
-| 4 | 1:15–1:45 | Type a message → Post → tx confirms in feed → click CookieScan tx link | "I sign one memo transaction. It confirms in well under a second on Cookie Chain, appears at the top of my feed instantly, and here it is on CookieScan — a real Memo-program instruction from my wallet. No backend, no database." |
-| 5 | 1:45–2:00 | Scroll back to feed, end on the hero | "That's Cookie Wall: post and read real on-chain memos on Cookie Chain with nothing but a wallet and the primitives the chain ships. Built for the Cookie Chain app bounty. Thanks for watching." |
-
-**Recording notes**
-- Do a dry run of the feed + network-switch beats first; keep the wallet already on the
-  Cookie Chain network so segment 3 is smooth.
-- Segment 3 is the only place a funded wallet is required (a real post). Everything else
-  can be recorded on an empty wallet. **See the COOK note below before recording.**
-- Trim dead air; target ≤ 2:15.
+Optional (if the form has an extra description box): paste the **pitch block from §1**.
 
 ---
 
-## 3. ⚠️ Blocker before recording segment 3 — the posting wallet needs COOK
+## 3. X (Twitter) thread — the demo deliverable (ready to post)
 
-Cookie Chain has **no faucet** (confirmed 2026-09-09). To post a real memo on camera the
-recording wallet needs ≥ ~0.000005 COOK (5,000 lamports fee). Three ways:
+Post as a thread from your X account. Attach `screenshots/01-home-feed.png` to post 1 and
+`03-live-deploy.png` (a real confirmed memo) to post 5. Replace `{{...}}` once.
 
-1. **Telegram** — ask in https://t.me/TheCookieNetChain for a small COOK drip to your address.
-2. **Bridge from Solana** — https://hyperlane.cookiescan.io.
-3. **DEX swap** — buy COOK on-chain.
-
-Once funded: switch the wallet to Cookie Chain in-app, post, and the screenshot/live URL
-will show a real memo authored by your wallet.
-
-### Draft message — post in https://t.me/TheCookieNetChain
-
-> Hi all — building a small demo app for the Cookie Chain app bounty (a live on-chain memo
-> board that reads/writes the Memo program). I just need to post one real memo on camera for
-> the demo. Could someone send a tiny COOK drip to cover the ~5,000 lamport fee? My address:
+**Post 1/6**
+> I built Cookie Wall — a live, on-chain memo board on Cookie Chain 🍪
 >
-> `<<PASTE YOUR NIGHTLY WALLET ADDRESS HERE>>`
+> Every message is a real signed transaction to the Solana Memo program. No mock data, no
+> database, no backend. Reading the wall streams the actual chain history.
 >
-> Happy to send a screenshot of the confirmed tx back in here. Thanks!
+> Live: https://sidsri14.github.io/cookie-chain-svm-capp/
+> Code: https://github.com/sidsri14/cookie-chain-svm-capp
+>
+> 🧵 1/6
 
-(Tip: paste the address you'll actually record with — the Nightly wallet switched to Cookie
-Chain. A single drip of a fraction of a COOK covers thousands of posts.)
+**Post 2/6 — what it does**
+> What you can do:
+> • Post a memo — sign one tx, it confirms on Cookie Chain in under a second
+> • Read the chain-wide feed with no wallet connected — it's real history from the RPC
+> • See on-chain activity: memos in view, unique posters, 24h volume + a 12h sparkline
+> • Check your native COOK balance, straight from the chain
+> 2/6
+
+**Post 3/6 — how to use it**
+> How to use it:
+> 1. Open the site (the feed loads immediately — no login)
+> 2. Click "Switch Nightly → Cookie Chain" — one click re-targets the wallet to the chain's
+>    genesis hash, so you never add the RPC by hand
+> 3. Connect Nightly / Phantom / Solflare
+> 4. Type a message, hit Post, sign
+> 5. Your memo appears at the top of the feed and deep-links to CookieScan
+> 3/6
+
+**Post 4/6 — need COOK? (bridge guide — required by the bounty)**
+> Posting costs ~5,000 lamports (~0.000005 COOK) — a fraction of a cent. Cookie Chain has no
+> faucet, so you need a little COOK first. If your wallet is empty the app detects it,
+> disables Post, and links you straight to the bridge:
+>
+> 🌉 Bridge COOK from Solana: https://hyperlane.cookiescan.io
+>
+> The same card links the official Telegram for a small drip. 4/6
+
+**Post 5/6 — proof it's real**
+> Here's a real post I wrote — a signed Memo-program instruction from my wallet, confirmed
+> on Cookie Chain and viewable on CookieScan. Every signature in the feed links to a real tx.
+>
+> [attach screenshots/03-live-deploy.png]
+> 5/6
+
+**Post 6/6 — close**
+> Cookie Wall uses only the primitives Cookie Chain ships: the genesis Memo program + the
+> public RPC. No contract deploy, no token, no paid API key. React 19 + @solana/web3.js.
+>
+> Built for the @Superteam Earn "Create an App on Cookie Chain" bounty. 🍪
+>
+> Live: https://sidsri14.github.io/cookie-chain-svm-capp/
+> 6/6
 
 ---
 
-## 4. Submission checklist
+## 4. Telegram post — Final Step ("Share your X thread in the Cookie Chain community")
 
-- [ ] Wallet funded with COOK (segment 3)
-- [ ] Screenshot of a **real memo you posted** (hero shot)
-- [ ] Record Loom (~2 min) using the script above
-- [ ] Copy the pitch block (section 1) into the Superteam submission
-- [ ] Attach screenshots (`screenshots/01..03` + the new post screenshot)
-- [ ] Live URL: https://sidsri14.github.io/cookie-chain-svm-capp/
-- [ ] Repo URL: https://github.com/sidsri14/cookie-chain-svm-capp
-- [ ] Submit on Superteam Earn before **2026-09-22 21:59 UTC**
+Post this in https://t.me/TheCookieNetChain with the link to your thread:
+
+> Hey all 🍪 I built **Cookie Wall** — a live on-chain memo board on Cookie Chain. Every post
+> is a real signed Memo-program tx; the feed streams actual chain history. React 19 +
+> @solana/web3.js, live here: https://sidsri14.github.io/cookie-chain-svm-capp/
+>
+> Wrote up how it works + how to use it (incl. the COOK bridge) in this thread:
+> `<<PASTE YOUR X THREAD URL HERE>>`
+>
+> Feedback welcome! Built for the Superteam app bounty.
+
+---
+
+## 5. Submission checklist
+
+- [ ] Post the X thread (§3) from your account — attach the two screenshots
+- [ ] Share the thread link in the Cookie Chain Telegram (§4)
+- [ ] On Superteam Earn, fill the 3 required fields from §2 (repo · addresses · live URL)
+- [ ] Optionally paste the §1 pitch into the description box
+- [ ] Attach screenshots (`screenshots/01..03` + the real-post shot)
+- [ ] Submit before **2026-09-22 21:59:59 UTC**
+
+### What is already done (no action needed)
+- ✅ App is live and deploying on push to `master` (GitHub Pages)
+- ✅ Repo is open source with a comprehensive README + setup instructions
+- ✅ App contains the bridge guide required by the bounty (ComposeBox + tx-error messages)
+- ✅ On-chain addresses (Memo program, genesis, RPC) are documented above and in the README
+- ✅ Analytics panel (`ChainStats.tsx`) satisfies the "meaningful interaction" objective

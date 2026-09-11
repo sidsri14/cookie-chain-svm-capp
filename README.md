@@ -4,6 +4,18 @@
 > A real, wallet-connected dApp that posts and reads **actual on-chain Memo transactions**
 > against the Cookie Chain SVM RPC. No mock data, no invented programs, no paid API.
 
+**🔗 Live app:** https://sidsri14.github.io/cookie-chain-svm-capp/
+
+### On-chain addresses
+
+| Item | Value |
+|------|-------|
+| Memo program (genesis-deployed) | `MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr` |
+| Cookie Chain genesis hash | `9wDaBRDgArEUpvhHxGguNkwozsZh4UpGZB9o2EoEcBB2` |
+| RPC endpoint | `https://rpc.cookiescan.io` |
+| Explorer | `https://cookiescan.io` |
+| COOK bridge (from Solana) | `https://hyperlane.cookiescan.io` |
+
 ---
 
 ## What This Is
