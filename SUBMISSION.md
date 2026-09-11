@@ -1,7 +1,7 @@
 # Cookie Wall — Superteam Earn Submission Kit
 
 Bounty: **Create an App on Cookie Chain ($1,000 USDC)**
-Deadline: **2026-09-28**
+Deadline: **2026-09-22 21:59 UTC** (verified via Superteam API 2026-09-11)
 Live URL: https://sidsri14.github.io/cookie-chain-svm-capp/
 Repo: https://github.com/sidsri14/cookie-chain-svm-capp
 Screenshots: `screenshots/01-home-feed.png`, `02-connect-modal.png`, `03-live-deploy.png`
@@ -71,6 +71,19 @@ recording wallet needs ≥ ~0.000005 COOK (5,000 lamports fee). Three ways:
 Once funded: switch the wallet to Cookie Chain in-app, post, and the screenshot/live URL
 will show a real memo authored by your wallet.
 
+### Draft message — post in https://t.me/TheCookieNetChain
+
+> Hi all — building a small demo app for the Cookie Chain app bounty (a live on-chain memo
+> board that reads/writes the Memo program). I just need to post one real memo on camera for
+> the demo. Could someone send a tiny COOK drip to cover the ~5,000 lamport fee? My address:
+>
+> `<<PASTE YOUR NIGHTLY WALLET ADDRESS HERE>>`
+>
+> Happy to send a screenshot of the confirmed tx back in here. Thanks!
+
+(Tip: paste the address you'll actually record with — the Nightly wallet switched to Cookie
+Chain. A single drip of a fraction of a COOK covers thousands of posts.)
+
 ---
 
 ## 4. Submission checklist
@@ -82,4 +95,4 @@ will show a real memo authored by your wallet.
 - [ ] Attach screenshots (`screenshots/01..03` + the new post screenshot)
 - [ ] Live URL: https://sidsri14.github.io/cookie-chain-svm-capp/
 - [ ] Repo URL: https://github.com/sidsri14/cookie-chain-svm-capp
-- [ ] Submit on Superteam Earn before **2026-09-28**
+- [ ] Submit on Superteam Earn before **2026-09-22 21:59 UTC**
